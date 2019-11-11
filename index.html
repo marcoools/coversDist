@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Conversor de Distância</title>
+		<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">   
+		<link rel="stylesheet" type="text/css" href="convers.css">
+
+		<script type="text/javascript">
+
+			function converte(){
+				var x;
+				var m;
+				var n;
+				var k;
+
+				x = document.getElementById("de").value;
+				m = document.getElementById("mei").value;
+				n = document.getElementById("mef").value;
+				k= (m) - (n);
+
+				var r = x*(Math.pow(10, k));
+				document.getElementById("final").value = r;
+
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<h1>Conversor de Distância</h1>
+		
+		<div class="side">
+				<input type="number" step="0.01" placeholder="D. Inicial" id="de">			
+		</div>	
+
+		<div id="center">
+		
+			<p>DE:</p>
+
+			<select name="medida_i" id="mei">
+							
+				<option value="3"> Quilômetro</option>
+				<option value="2"> Hectometro</option>
+				<option value="1"> Decâmetro</option>
+				<option value="0"> Metro</option>
+				<option value="-1"> Decímetro</option>
+				<option value="-2"> Centímetro</option>
+				<option value="-3"> Milímetro</option>
+							
+			</select>
+
+			<p>Para:</p>
+
+			<select name="medida_f" id="mef">
+				
+				<option value="3"> Quilômetro</option>
+				<option value="2"> Hectometro</option>
+				<option value="1"> Decâmetro</option>
+				<option value="0"> Metro</option>
+				<option value="-1"> Decímetro</option>
+				<option value="-2"> Centímetro</option>
+				<option value="-3"> Milímetro</option>
+							
+			</select>
+		</div>
+
+		<div class="side">
+				<input type="text" placeholder="D. Final"  id="final" readonly="true">
+		</div>
+
+		<div id="butto">
+				<button id="converter" onclick="converte()"> Converter </button>
+		</div>
+
+	</body>
+</html>
